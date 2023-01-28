@@ -16,7 +16,7 @@ type SLL[T comparable] struct {
 	head *Node[T]
 }
 
-func makeSLL[T comparable]() SLL[T] {
+func MakeSLL[T comparable]() SLL[T] {
 	return SLL[T]{head: nil}
 }
 
