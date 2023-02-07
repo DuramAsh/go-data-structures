@@ -45,6 +45,7 @@ func (s *Stack[T]) Pop() (*Node[T], error) {
 		return nil, fmt.Errorf("stack is empty")
 	}
 	toRet := s.Peek()
+	s.setSize(s.Size() - 1)
 	s.setTop(toRet.Next)
 	return toRet, nil
 }
