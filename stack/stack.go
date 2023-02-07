@@ -7,6 +7,10 @@ type Stack[T comparable] struct {
 	size int
 }
 
+func MakeStack[T comparable]() Stack[T] {
+	return Stack[T]{top: nil, size: 0}
+}
+
 func (s *Stack[T]) setTop(top *Node[T]) {
 	s.top = top
 }
